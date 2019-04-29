@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/assets/css/stye.css">
+    <link rel="stylesheet" href="/public/assets/css/foundation.css">
+</head>
+
+<body>
+    <script>
+        src = "https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity = "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin = "anonymous"</script>
+    <script type="text/javascript"></script>
+
+    <form action="/enter_name" method="POST"><input type="text" id="name" name="name" placeholder="What is your name?"
+            class="friend_form" required>
+        <input type="text" id="pic" name="pic" placeholder="Link to Image" class="friend_form" required>
+
+    <h4>Make your choices based on your agreement with the follow statements:</h4>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <ol>
+                    <li>"Pizza is one of my favorite food"</li>
+                    <select class="q_select" id="q1" name="q[1]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+
+                    <li>"I generally see myself as a dog person"</li>
+                    <select class="q_select" id="q2" name="q[2]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I like to go to the movies" </li>
+                    <select class="q_select" id="q3" name="q[3]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+
+                    <li>"I like to spend time outdoors"</li>
+                    <select class="q_select" id="q4" name="q[4]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I like to get involved in local politics"</li>
+                    <select class="q_select" id="q5" name="q[5]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I see myself staying in the Bay Area the rest of my life"</li>
+                    <select class="q_select" id="q6" name="q[6]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I like to volunteer on the weekends"</li>
+                    <select class="q_select" id="q7" name="q[7]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I don't see myself wanting to travel internationally" </li>
+                    <select class="q_select" id="q8" name="q[8]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"I am satisfied with just having an average life" </li>
+                    <select class="q_select" id="q9" name="q[9]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                    <li>"Reading is a worthwhile activity"</li>
+                    <select class="q_select" id="q10" name="q[10]">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strong Agree)</option>
+                    </select>
+                </ol>
+                <button>Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript" src="/public/Assets/js/app.js"></script> -->
+        <script type="text/javascript">
+        
+//         function validInput(){
+//     var valid= true;
+//     $('.friend_form').each(function(){
+//         if($(this).val()==""){
+//             valid=false
+//         }
+//     })
+//     $('.q_select').each(function(){
+//         if($(this).val()==""){
+//             valid=false
+//         }
+//     })
+//     return valid; 
+// }
+
+// if (validInput()){
+//     var userdata={
+//         name: $('#name').val(),
+//         photo: $('#pic').val(),
+//         scores: [$("#q1").val(),
+//         $("#q2").val(),
+//         $("#q3").val(),
+//         $("#q4").val(),
+//         $("#q5").val(),
+//         $("#q6").val(),
+//         $("#q7").val(),
+//         $("#q8").val(),
+//         $("#q9").val(),
+//         $("#q10").val()
+//       ]
+
+//     };
+// }
+
+// $.post('/api/friends', userdata, function (data) {});
+//       </script>
+</body>
+
+</html>
