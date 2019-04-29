@@ -60,7 +60,7 @@ app.post('/enter_name',function(req,res){
       console.log(query.sql)
       if (error) 
         return res.send(error)
-      res.redirect('pages/survey')
+      res.render('pages/survey')
     })
   })
 })

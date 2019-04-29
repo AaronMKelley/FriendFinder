@@ -2,11 +2,7 @@ USE friend_finder;
 
 
 
-SELECT s.question_id, s.friend_id, s.score
-FROM scores s
-LEFT JOIN friends f
-ON f.id = s.friend_id
-ORDER BY s.question_id, s.friend_id, s.score;
+
 
 INSERT INTO questions (question) VALUES ("Pizza is one of my favorite foods."),
 ("I generally see myself as a dog person"),

@@ -36,8 +36,38 @@ CREATE TABLE scores(
 
 		/* a score belongs to an friend */
 
+SELECT s.question_id, s.friend_id, s.score
+FROM scores s
+LEFT JOIN friends f
+ON f.id = s.friend_id
+ORDER BY s.question_id, s.friend_id, s.score;
 
+SELECT scores.friend_id, scores.question_id,scores.score,
+    LAG (scores.score,1) OVER () prev_score,
+    LAG (scores.score,1) OVER () - scores.score difference
+FROM scores 
+LEFT JOIN friends
+ON scores.friend_id=friends.id;
+/*--------------------------------------------------------------------*/
 
+SELECT scores.friend_id, scores.question_id,scores.score,
+        LAG (scores.score,1) OVER () prev_score,
+    ->     LAG (scores.score,1) OVER () - scores.score difference
+    -> FROM scores 
+    -> LEFT JOIN friends
+    -> ON scores.friend_id=friends.id;
 
+/*--------------------------------------------------------------------*/
+
+SELECT scores.question_id, scores.friend_id, scores.score,
+        LAG(scores.friend_id ,1) OVER () previous_friend_id,
+        LAG (scores.score, 1) OVER () prev_score,
+        LAG (scores.score, 1) OVER () - scores.score difference
+FROM scores 
+LEFT JOIN friends 
+ON scores.friend_id=friends.id
+ORDER BY question_id;
+
+/*--------------------------------------------------------------------*/
 
 
